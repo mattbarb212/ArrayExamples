@@ -29,7 +29,8 @@ namespace ArrayExamples
 
             for (int i = 0; i < numbers.Length; i++)
             {
-
+                numbers[i]++;
+                q1Output.Text += $"{numbers[i] }";
             }
 
 
@@ -39,7 +40,14 @@ namespace ArrayExamples
             /// Sample Output:
             /// The sum is 20
 
+            int sum = 0;
 
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum = sum + numbers[i]; // sum += numbers[i];
+            }
+
+            q2Output.Text = $"The sum is {sum}";
 
             /// 3. Perform the following on the given array, then 
             /// display the updated array values.
@@ -54,7 +62,19 @@ namespace ArrayExamples
             /// Sample Output
             /// -6 8 24 6 5
 
+            numbers[1] += 5;
+            numbers[2] = numbers[2] * numbers[4];
+            numbers[0] = numbers[1] - numbers[0];
 
+            int temp = numbers[3];
+
+            numbers[3] = numbers[4];
+            numbers[4] = temp;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                q3Output.Text += $"{numbers[i]} ";
+            }
         }
     }
 }
